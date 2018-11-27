@@ -48,7 +48,7 @@
     "dev": "npm-run-all clean build:react start:dev",
     "prod": "npm-run-all build start:prod",
     "start:dev": "cross-env NODE_ENV=development node bin/entry",
-    "build:wds": "webpack --config prod.config.js",
+    "build:wds": "webpack",
     "build": "npm-run-all clean build:react build:pro",
     "build:react": "webpack --config build/react.config.js",
     "build:pro": "webpack --config build/pro.config.js"

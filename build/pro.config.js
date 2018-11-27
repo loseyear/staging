@@ -1,6 +1,6 @@
-const webpack = require('webpack');
-const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const webpack = require('webpack')
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   target: 'web',
@@ -21,7 +21,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', "@babel/preset-react"]
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       }, {
@@ -66,13 +66,13 @@ module.exports = {
         use: ['url-loader?limit=10000&mimetype=images/svg+xml']
       }, {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
       }, {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file-loader"
+        loader: 'file-loader'
       }, {
         test: /\.json$/,
-        use: "json-loader"
+        use: 'json-loader'
       }
     ]
   },
@@ -82,9 +82,9 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // filename: "[name].[hash:5].css",
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      // filename: '[name].[hash:5].css',
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
     new webpack.DllReferencePlugin({
       context: __dirname,

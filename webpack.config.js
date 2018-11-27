@@ -8,7 +8,7 @@ module.exports = {
   target: 'web',
   mode: 'development',
   entry: {
-    app: ['./client/client.jsx']
+    app: ['./src/client']
   },
   output: {
     path: path.resolve(__dirname, './asset/script'),
@@ -28,6 +28,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html?$/,
+        use: [
+          'raw-loader'
+        ]
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,

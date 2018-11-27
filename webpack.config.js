@@ -4,9 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
+const mode = process.env.NODE_ENV
+
 module.exports = {
   target: 'web',
-  mode: 'development',
+  mode: mode || 'production',
   entry: {
     app: ['./src/client']
   },

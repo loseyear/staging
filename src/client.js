@@ -1,3 +1,4 @@
-import '../build/wds.html'
+import './index.html'
+import './style.scss'
 
 console.log('aaa')

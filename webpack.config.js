@@ -50,12 +50,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader?importLoaders=1',
-            options: {
-              modules: true,
-              localIdentName: '[name]_[local]_[hash:base64:5]',
-              minimize: true
-            }
+            loader: 'css-loader',
           }, {
             loader: 'sass-loader',
             options: {
@@ -68,7 +63,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader?importLoaders=1',
+            loader: 'css-loader',
             options: {
               minimize: true
             }
@@ -107,7 +102,7 @@ module.exports = {
       chunkFilename: '[id].css'
     }),
     new HtmlWebpackPlugin({
-      template: 'build/wds.html'
+      template: 'src/index.html'
     }),
     new OpenBrowserPlugin({
       url: 'http://localhost:9000'

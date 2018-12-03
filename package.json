@@ -35,7 +35,6 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.26.1",
@@ -52,5 +51,9 @@
     "build": "npm-run-all clean build:react build:pro",
     "build:react": "webpack --config build/react.config.js",
     "build:pro": "webpack --config build/pro.config.js"
+  },
+  "devDependencies": {
+    "css-hot-loader": "^1.4.2",
+    "rimraf": "^2.6.2"
   }
 }

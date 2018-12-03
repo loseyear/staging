@@ -1,4 +1,4 @@
 import './index.html'
 import './style.scss'
 
-console.log('aaa')
+console.log('it works!')

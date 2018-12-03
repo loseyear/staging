@@ -48,12 +48,11 @@ module.exports = {
       }, {
         test: /\.scss$/,
         use: [
-          'css-hot-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader?importLoaders=1',
             options: {
-              modules: false,
+              modules: true,
               localIdentName: '[name]_[local]_[hash:base64:5]',
               minimize: true
             }
@@ -67,7 +66,6 @@ module.exports = {
       }, {
         test: /\.(less|css)$/,
         use: [
-          'css-hot-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
